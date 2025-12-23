@@ -1,46 +1,61 @@
-E-Commerce Backend API
+🛒 E-Commerce Backend API
 
 A production-ready E-commerce backend built using Node.js, Express.js, and MongoDB, following clean MVC architecture.
 This backend handles authentication, product management, cart, orders, and payments with secure APIs.
 
 🚀 Features
+🔐 Authentication
 
-🔐 JWT Authentication
-User Register & Login
-Token-based route protection
+User Registration & Login
+
+JWT-based token authentication
+
+Protected routes using middleware
 
 👤 User & Admin Management
+
+Role-based access control
+
 Admin-only routes using middleware
-Secure role-based access control
 
 📦 Product Management
-Create, update, delete & fetch products
+
+Create, update, delete, and fetch products
+
 Clean RESTful APIs
 
 🛒 Cart Management
-Add/remove products from cart
+
+Add / remove products from cart
+
 User-specific cart handling
 
 📑 Order Management
+
 Place orders from cart
+
 View user order history
 
 💳 Payment Handling
-Payment controller & schema ready
-Razorpay integration structure added
 
-🗄 MongoDB Integration
-Mongoose schemas & relations
-Scalable database design
+Payment controller & schema implemented
+
+Razorpay integration structure ready
+
+🗄 Database Integration
+
 
 🛠 Tech Stack
-Backend: Node.js, Express.js
-Database: MongoDB, Mongoose
-Auth: JSON Web Token (JWT)
-Payment: Razorpay (Structure ready)
-Tools: Postman, Git, GitHub
 
-Folder structure
+Backend: Node.js, Express.js
+
+Database: MongoDB, Mongoose
+
+Auth: JSON Web Token (JWT)
+
+Payment: Razorpay (Structure ready)
+
+Tools: Postman, Git, GitHub
 
 backend/
 │── config/
@@ -79,52 +94,70 @@ backend/
 │── package.json
 │── package-lock.json
 
-
 ⚙️ Environment Variables
 
 Create a .env file inside backend/ folder:
+
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 RAZORPAY_KEY_ID=your_key_id
 RAZORPAY_KEY_SECRET=your_key_secret
 
-
 ▶️ Installation & Run
+
 npm install
 npm run dev
 
 Server will start at:
+
 http://localhost:5000
 
-
 🔑 API Routes Overview
-
 🔐 Auth Routes
+
 POST /api/auth/register
+
 POST /api/auth/login
 
 📦 Product Routes
+
 POST /api/products (Admin)
+
 GET /api/products
+
 PUT /api/products/:id
+
 DELETE /api/products/:id
 
 🛒 Cart Routes
+
 POST /api/cart
+
 GET /api/cart
+
 DELETE /api/cart/:id
 
 📑 Order Routes
+
 POST /api/orders
+
 GET /api/orders/my-orders
 
 💳 Payment Routes
+
 POST /api/payment/create-order
+
 POST /api/payment/verify
 
-🔮 Future Improvements
+
+Future Improvements
+
 Product reviews & ratings
+
 Order status tracking
+
 Payment webhooks
+
 Admin dashboard APIs
+
